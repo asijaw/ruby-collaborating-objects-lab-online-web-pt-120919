@@ -6,7 +6,7 @@ class Artist
   def initialize(name)
     @name = name
     # @songs = []
-    # @@all << self
+     @@all << self
   end 
   
   # def save
@@ -22,9 +22,9 @@ class Artist
   end 
   
   def add_song(song)
-    @songs << song
+    #@songs << song
     song.artist = self
-    song
+    #song
 
   end 
   
@@ -35,7 +35,7 @@ class Artist
   
   def self.create(artist_name)
     artist = self.new(artist_name)
-    @@all << artist
+    #@@all << artist
     #artist.save
     artist
   end
