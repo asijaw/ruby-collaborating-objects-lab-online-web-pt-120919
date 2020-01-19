@@ -5,27 +5,22 @@ class Artist
  
   def initialize(name)
     @name = name
-    # @songs = []
-     @@all << self
+    @songs = []
+    @@all << self
   end 
-  
-  # def save
-  #   @@all << self
-  # end
   
   def self.all 
     @@all 
   end
   
   def songs 
-    Song.all.select {|song| song.artist == self}
+    #Song.all.select {|song| song.artist == self}
+    @songs
   end 
   
   def add_song(song)
-    #@songs << song
     song.artist = self
-    #song
-
+    @songs << song
   end 
   
   def self.find(artist_name)
